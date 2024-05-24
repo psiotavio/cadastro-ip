@@ -1,0 +1,34 @@
+.custom-dropdown-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .custom-dropdown-container label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #012856;
+    font-weight: 500;
+  }
+  
+  .custom-dropdown-container select {
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px 0.5rem;
+    outline: none;
+    color: #012856;
+  }
+  
+  .custom-dropdown-container select:focus {
+    border-color: #0091ea;
+    box-shadow: 0 0 0 2px rgba(0, 145, 234, 0.25);
+  }
+  
+  .custom-dropdown-container select::placeholder {
+    color: #6c757d;
+  }
+  

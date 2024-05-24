@@ -1,0 +1,8 @@
+.date-picker-input::-webkit-calendar-picker-indicator {
+  color: #000000; 
+  opacity: 1;
+  display: block;
+  border-width: 0;  
+  font-size: 20px;
+  margin-right: 10px;
+}

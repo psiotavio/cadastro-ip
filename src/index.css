@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html,body {
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+*,body {
+  font-family: "Roboto", sans-serif
+}
+
+
+body {
+  background-color: #f5f5f5;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: auto
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote,address,big,cite,code,em,font,img,small,strike,sub,sup,li,ol,ul,fieldset,form,label,legend,button,table,caption,tr,th,td {
+  border: none;
+  margin: 0;
+  padding: 0
+}
+
+ul,li {
+  list-style: none
+}
+
+a {
+  text-decoration: none
+}
+
+a:visited {
+  color: inherit
+}
+
+button {
+  cursor: pointer
+}
+
+button,input,textarea {
+  outline: none;
+  border: 0px
+}
+
+img {
+  max-width: 100%
 }
