@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent } from 'react';
+import React from 'react';
 import "./CustomInput.css"
 
 interface CustomInputProps {
@@ -7,8 +7,8 @@ interface CustomInputProps {
   type?: string;
   value: string;
   placeholder?: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+  onChange: (value: any) => void;
+  onBlur?: (value: any) => void;
   className?: string;
   required?: boolean;  
 }
@@ -35,12 +35,12 @@ const CustomInput: React.FC<CustomInputProps> = ({
   className,
   required = false  
 }) => {
-  const handleCPFChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleCPFChange = (cpf: any) => {
     if (type === 'cpf') {
-      const formattedValue = formatCPF(e.target.value);
-      onChange({ ...e, target: { ...e.target, value: formattedValue } });
+      const formattedCPF = formatCPF(cpf.target.value);
+      onChange({ ...cpf, target: { ...cpf.target, value: formattedCPF } });
     } else {
-      onChange(e);
+      onChange(cpf);
     }
   };
 

@@ -4,7 +4,7 @@ import './SearchBar.css';
 interface SearchBarProps {
   placeholder: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (value: any) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ placeholder, value, onChange }) => {

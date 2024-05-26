@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FocusEvent } from 'react';
+import React from 'react';
 import '../Input/CustomInput.css';
 import './CustomDatePicker.css'; 
 
@@ -6,8 +6,8 @@ interface CustomDatePickerProps {
   id: string;
   label: string;
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onBlur?: (e: FocusEvent<HTMLInputElement>) => void;
+  onChange: (value: any) => void;
+  onBlur?: (value: any) => void;
   className?: string;
   min?: string; 
   max?: string; 

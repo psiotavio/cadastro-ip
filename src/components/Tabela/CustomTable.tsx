@@ -37,8 +37,8 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
     });
 };
 
-  const handleSaveChanges = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSaveChanges = (value: any) => {
+    value.preventDefault();
     if (editFormData) {
         pacienteService.updatePaciente(editFormData.id, editFormData);
         handleCloseModal();
@@ -50,6 +50,11 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
       ...prev!,
       [name]: value,
     }));
+  };
+
+  const formatDate = (date: string) => {
+    const dateParts = date.split('-'); 
+    return `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
   };
 
   const filteredPatients = patients.filter((patient) => {
@@ -80,7 +85,7 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
           {filteredPatients.map((patient) => (
             <tr key={patient.cpf} onClick={() => handleOpenModal(patient)}>
               <td>{patient.name}</td>
-              <td>{patient.dateOfBirth}</td>
+              <td>{formatDate(patient.dateOfBirth)}</td>
               <td>{patient.cpf}</td>
               <td>{patient.gender}</td>
               <td>{patient.address || "Não informado"}</td>

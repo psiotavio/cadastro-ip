@@ -15,20 +15,20 @@ function CustomForm() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const pacienteService = PacienteService.getInstance();
 
-  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedDate(e.target.value);
+  const handleDateChange = (value: any) => {
+    setSelectedDate(value.target.value);
   };
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
+  const handleNameChange = (value:any) => {
+    setName(value.target.value);
   };
 
-  const handleCPFChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCpf(e.target.value);
+  const handleCPFChange = (value: any) => {
+    setCpf(value.target.value);
   };
 
-  const handleAddressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAddress(e.target.value);
+  const handleAddressChange = (value:any) => {
+    setAddress(value.target.value);
   };
 
   const savePatient = () => {
