@@ -52,10 +52,12 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
     }));
   };
 
-  const filteredPatients = patients.filter((patient) =>
-    patient.name.toLowerCase().includes(filter.toLowerCase())
-  );
-
+  const filteredPatients = patients.filter((patient) => {
+    const normalizedPatientName = patient.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const normalizedFilter = filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return normalizedPatientName.includes(normalizedFilter);
+  });
+  
   return (
     <div>
       <SearchBar
@@ -117,7 +119,7 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
               items={[
                 { label: "Feminino", value: "Feminino" },
                 { label: "Masculino", value: "Masculino" },
-                { label: "Outro", value: "Outro" },
+                { label: "Prefiro não informar", value: "Prefiro não informar" },
               ]}
               value={editFormData.gender}
               onChange={handleDropdownChange("gender")}
