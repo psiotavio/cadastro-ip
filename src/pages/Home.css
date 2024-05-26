@@ -3,23 +3,42 @@
 }
 
 .App-logo {
-  height: 5vmin;
+  max-width: 100%;
   pointer-events: none;
+  align-self: flex-start;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
 .App-header {
   background-color: #f5f5f5;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: #012856;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 2rem 0rem 2.4rem 0rem;
+}
+
+
+.App-content{
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin: auto;
+  padding: 4rem 2rem 5rem 2rem;
 }
 
 .App-link {
   color: #0091ea;
+}
+
+.App-register-button{
+  padding-left: 2.4rem;
+  padding-right: 10rem;
 }
 
 

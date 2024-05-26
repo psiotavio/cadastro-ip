@@ -38,6 +38,7 @@ function CustomForm() {
     }
   
     const newPatient = {
+      id: 0,
       name,
       cpf,
       address, 
@@ -76,7 +77,7 @@ function CustomForm() {
       />
       <CustomDatePicker
         id="date-input"
-        label="Data"
+        label="Data de Nascimento"
         required={true}
         value={selectedDate}
         onChange={handleDateChange}
