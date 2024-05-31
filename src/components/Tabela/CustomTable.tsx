@@ -58,8 +58,8 @@ const CustomTable: React.FC<CustomTableProps> = ({ patients }) => {
   };
 
   const filteredPatients = patients.filter((patient) => {
-    const normalizedPatientName = patient.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-    const normalizedFilter = filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const normalizedPatientName = patient.name ? patient.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
+    const normalizedFilter = filter ? filter.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";    
     return normalizedPatientName.includes(normalizedFilter);
   });
   
